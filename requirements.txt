@@ -1,4 +1,4 @@
 streamlit
 pandas
 matplotlib
-pmdarima
+pmdarima --prefer-binary
