@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-from pmdarima import auto_arima
 from statsmodels.tsa.arima.model import ARIMA
 
 model = ARIMA(ts, order=(1, 1, 1))  # You can tune (p,d,q)
