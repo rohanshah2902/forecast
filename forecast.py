@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from pmdarima import auto_arima
+from statsmodels.tsa.arima.model import ARIMA
+
+model = ARIMA(ts, order=(1, 1, 1))  # You can tune (p,d,q)
+model_fit = model.fit()
+forecast = model_fit.forecast(steps=7)
 
 st.set_page_config(page_title="7-Day AQI Forecast", layout="centered")
 st.title("📈 7-Day AQI Forecast by City")
